@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不太一樣的星巴克</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/MyAll.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/animate.min.css">
+    <link rel="icon" href="path/to/your/icon.png" type="image/png">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --info-color: #0dcaf0;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+
+        .timeline-section {
+            position: relative;
+        }
+
+        .timeline-section::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: var(--primary-color);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .caption-text {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .caption-text2 {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .text-s07,
+            .text-s09 {
+                z-index: 10;
+                background-color: rgba(0, 0, 0, 0.3);
+                color: aliceblue;
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .text-s06 {
+                display: none;
+            }
+
+            .timeline-section::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                bottom: 0;
+                width: 0px;
+            }
+        }
+
+        .s12a {
+            display: block;
+            text-decoration-line: none;
+            color: black;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-body {
+            text-align: center;
+        }
+        footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-light" style="width: 100%; margin: 0 auto;">
+    <!-- section 01 top -->
+    <section class="py-1" style="background-color: var(--mycolor01);">
+        <div class="container">
+            <div class="text-end">
+                <i class="fa-brands fa-square-facebook text-warning fa-2x"></i>
+                <i class="fa-brands fa-square-x-twitter text-danger fa-2x"></i>
+                <i class="fa-brands fa-line text-success fa-2x"></i>
+            </div>
+        </div>
+    </section>
+    <!-- section 02 title -->
+    <section style="background-color: var(--mycolor02);">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#" style="color: var(--greekgetaway02);">不太一樣的星巴克
+                    <i class="fa-solid fa-crown text-danger fa-2x wow animate__heartBeat" data-wow-duration="0.5s"
+                        data-wow-delay="0s" data-wow-iteration="30"></i>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#s04">關於星巴克</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#s05">企業責任</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#s06">社區關懷</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#s07">咖啡帶</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#s08">門市</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#s09">客製你最愛的飲料風味</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#s11">夥伴招募</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#s12">星禮程</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                門市
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">最新活動</a></li>
+                                <li><a class="dropdown-item" href="#">特色門市</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">門市服務</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="btn btn bg-warning me-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">登入</button>
+                    <button class="btn btn bg-success" data-bs-toggle="modal" data-bs-target="#registModal">註冊</button>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- loginModal 登入按鈕-->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h1 class="modal-title fs-5 text-white fw600" id="exampleModalLabel">會員登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="" class="form-label">帳號</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">密碼</label>
+                        <input type="password" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- registModal 註冊按鈕-->
+    <div class="modal fade" id="registModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h1 class="modal-title fs-5 text-white fw600" id="exampleModalLabel">會員註冊</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row timeline-section">
+                        <div class="col-6">
+                            <div class="h3 fw900 text-center">會員守則</div>
+                            <p>守則1</p>
+                            <p>守則2</p>
+                            <p>守則3</p>
+                            <p>守則4</p>
+                            <div class="h3 fw900 text-center">會員權益</div>
+                            <p>權益1</p>
+                            <p>權益2</p>
+                            <p>權益3</p>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" name="" id="">
+                                <label for="" class="form-check-label">同意</label>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">帳號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">密碼</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">確認密碼</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">email</label>
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section 03 翻頁主版 -->
+    <section>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active bg-cover"
+                    style="background-image: url(images/c02.jpg); height: 90vh;">
+                    <div class="carousel-caption d-none d-md-block caption-text">
+                        <h5 class="fw600 text-danger">探索星巴克的故事</h5>
+                        <p>了解星巴克從咖啡的品質、人的情感連結，到每間星巴克門市的服務及美味的星巴克家享咖啡商品，想不斷傳遞的星巴克熱情及堅持</p>
+                    </div>
+                </div>
+                <div class="carousel-item bg-cover" style="background-image: url(./images/a03.jpg); height: 90vh;">
+                    <div class="carousel-caption d-none d-md-block caption-text">
+                        <h5 class="fw600 text-warning">對人的情感連結的承諾</h5>
+                        <p>雖然只是一杯咖啡，但當它被一隻手遞給吧檯對面的另一隻手，代表的就是一份情感連結。</p>
+                    </div>
+                </div>
+                <div class="carousel-item bg-cover" style="background-image: url(./images/04.jpg); height: 90vh;">
+                    <div class="carousel-caption d-none d-md-block caption-text">
+                        <h5 class="fw600 text-primary">星巴克的創立</h5>
+                        <p>1971年，當星巴克的第一間門市創立時，這間公司只是一家位於美國西雅圖，派克市場的門市。在1981年，霍華舒茲(Howard Schultz,
+                            星巴克前任執行長及董事長)品嘗了他的第一杯星巴克咖啡並深深愛上星巴克。在1987年，舒茲在其他投資者的協助下，買下星巴克的經營權，一段不凡的旅程也自此展開。 </p>
+                    </div>
+                </div>
+                <div class="carousel-item bg-cover" style="background-image: url(./images/b03.jpg); height: 90vh;">
+                    <div class="carousel-caption d-none d-md-block caption-text">
+                        <h5 class="fw600 text-su">品牌名稱靈感</h5>
+                        <p>來自白鯨記，代表著海上冒險色彩及早期咖啡貿易者的故事。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- section 04 次版跳字 -->
+    <section id="s04">
+        <div class="row align-items-center">
+            <div class="col-md-5 bg-cover"
+                style="background-image: url(/images/a13.jpg); height: 600px; background-attachment: fixed; background-position: -400px 0px; background-size: cover;">
+            </div>
+            <div class="col-md-7 p-5">
+                <h1>關於<span class="text-success">星巴克</span></h1>
+                <h4>星巴克的企業使命：啟發並滋潤人們的心靈，在每個人、每一杯、每個社區中皆能體現。秉持續追求卓越以及實踐企業使命與價值觀，我們透過每一杯咖啡的傳遞，將獨特的星巴克體驗帶入每位顧客的生活中。</h4>
+                <p class="mb-2">1971 年星巴克創立於美國西雅圖派克市場</p>
+                <p class="mb-2">1987 年霍華．舒茲(星巴克主席、總裁暨行政總裁)在當地投資者的協助下買下星巴克，同年在加拿大溫哥華開拓門市，為首次進軍國際市場</p>
+                <p>今日星巴克門市遍佈全球，已是全世界最主要的咖啡烘焙與零售業者，Starbucks Coffee 成為當今全球精品咖啡領導品牌，備受國際學者專家推崇，譽為「咖啡王國傳奇」</p>
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <h4 class=" text-center">全球據點</h4>
+                        <h2 class="fw900 text-warning text-center counter1">83<span class="h4 text-muted">/國家</span>
+                        </h2>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class=" text-center">經營分店</h4>
+                        <h2 class="fw900 text-danger text-center counter2">36,171<span class="h4 text-muted">/間</span>
+                        </h2>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class=" text-center">城市杯</h4>
+                        <h2 class="fw900 text-success text-center counter3">61<span class="h4 text-muted">/特色國家</span>
+                        </h2>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class=" text-center">隨行卡</h4>
+                        <h2 class="fw900 text-primary text-center counter4">14<span class="h4 text-muted">/台灣最新種類</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 05 背景圖、時間軸運用 -->
+    <section class="bg-dark bg-cover" style="background-image: url(/images/a01.jpg); background-attachment: fixed;"
+        id="s05">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-white py-3 me-auto">
+                    <div class="text-cover rounded rounded-4 shadow-lg p-2 wow animate__fadeInTopRight"
+                        data-wow-duration="2s" data-wow-delay="0s" data-wow-iteration="1">
+                        <h2 class="text-primary text-center fw900">企業責任</h2>
+                        <p>Starbucks™ Shared Planet.™ 星巴克共愛地球™ 計劃、道德採購與原住星希望。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-8 py-5">
+                    <div class="timeline-section">
+                        <div class="row mt-3 align-items-center timeline-section-pointer">
+                            <div class="col-md-6 text-center">
+                                <div class="text-cover rounded rounded-4 shadow-lg">
+                                    <div class="h3 text-danger fw900">星巴克共愛地球計畫</div>
+                                    <p class="text-info">
+                                        我們對品牌的承諾，從採購咖啡豆的源頭開始，重視與關注減少環境污染的議題，同時參與產地社區的建設與服務。</p>
+                                    <ul class="list-unstyled text-white text-start p-3">
+                                        <li>1.我們始終相信，咖啡將持續帶來美好的體驗。</li>
+                                        <li>2.也因為有您的參與，讓一杯咖啡的意義遠超乎我們的想像。</li>
+                                        <li>3.盡自己的一份力量 讓更多美好的事物可以傳播開來，正是此計劃的原始初衷。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 wow animate__fadeInTopLeft" data-wow-duration="3s"
+                                data-wow-delay="0.5s" data-wow-iteration="1">
+                                <div class="myimg bg-cover" style="background-image: url(/images/s05-1.jpg); height: 330px; border-radius: 10px;
+                                box-shadow: 2px 2px 10px 5px #f1f3ef;"></div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 align-items-center timeline-section-pointer flex-row-reverse">
+                            <div class="col-md-6 text-center">
+                                <div class="text-cover rounded rounded-4 shadow-lg">
+                                    <div class="h3 text-success fw900">企業公民責任</div>
+                                    <p class="text-info">
+                                        巴克積極在各市場成為一個對社會和環保負責與提供經濟利益持久不懈的優良國際公司，同時著重於改善自身咖啡農的社會與經濟狀態、減少對環境的破壞與影響、對當地社區投入正面的回饋並為我們的夥伴（公司員工）提供一個優良的工作環境。
+                                    </p>
+                                    <ul class="list-unstyled text-white text-start p-3">
+                                        <li>1.投資咖啡農及其社區。</li>
+                                        <li>2.踏上 100% 尋找道德採購資源的旅程。</li>
+                                        <li>3.透過合作關係，共同建立快速回復的供應鏈。</li>
+                                        <li>4.綠色零售商的領導者。</li>
+                                        <li>5.超過 500 家 LEED® 認證門市。</li>
+                                        <li>6.逐步達成我們的水資源保存目標。</li>
+                                        <li>7.提升使用環保杯意識。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 wow animate__backInLeft" data-wow-duration="3s" data-wow-delay="0.5s"
+                                data-wow-iteration="1">
+                                <div class="myimg bg-cover" style="background-image: url(/images/s05-2.jpg); height: 330px; border-radius: 10px;
+                                box-shadow: 2px 2px 10px 5px #f1f3ef;"></div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 align-items-center  timeline-section-pointer">
+                            <div class="col-md-6 text-center">
+                                <div class="text-cover rounded rounded-4 shadow-lg">
+                                    <div class="h3 text-danger fw900">環境保育</div>
+                                    <p class="text-info">一直以來，我們努力於減少環境污染，以及減緩對於地球暖化的傷害，我們不僅希望自己能做得更好，同時也希望可以因此影響更多人的投入。
+                                    </p>
+                                    <ul class="list-unstyled text-white text-start p-3">
+                                        <li>1.鼓勵大家使用隨行杯。</li>
+                                        <li>2.持續使用環保大豆油墨。</li>
+                                        <li>3.選購「低污染、省能資源、可回收」的環保產品。</li>
+                                        <li>4.推廣咖啡渣創意運用，讓咖啡渣不僅可以成為天然的肥料也可以自製出多項天然的商品。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 wow animate__fadeInDownBig" data-wow-duration="3s"
+                                data-wow-delay="0.5s" data-wow-iteration="1">
+                                <div class="myimg bg-cover" style="background-image: url(/images/s05-3.jpg); height: 330px; border-radius: 10px;
+                                box-shadow: 2px 2px 10px 5px #f1f3ef;"></div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 align-items-center timeline-section-pointer flex-row-reverse">
+                            <div class="col-md-6 text-center">
+                                <div class="text-cover rounded rounded-4 shadow-lg">
+                                    <div class="h3 text-success fw900">社區關懷</div>
+                                    <p class="text-white">
+                                        我們希望可以成為社區的一份子、成為社區的好鄰居，星巴克夥伴、熟客及社區之間有著緊密的關係，我們期待可以連結彼此為社區創造出更有人情味的氛圍。</p>
+                                    <ul class="list-unstyled text-white">
+                                        <li>我們不斷傳遞志工服務的精神。近年來透過夥伴的一起努力，參與各式社區的志工服務，如上山陪讀、淨灘及清掃狗園等活動，這些活動不但能豐富心靈也帶來無限啟發。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 wow animate__fadeInTopLeft" data-wow-duration="3s"
+                                data-wow-delay="0.5s" data-wow-iteration="1">
+                                <div class="myimg bg-cover" style="background-image: url(/images/s05-4.jpg); height: 330px; border-radius: 10px;
+                                box-shadow: 2px 2px 10px 5px #f1f3ef;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 06 次版重點敘述 -->
+    <section class="py-5" style="background-color: var(--mycolor01);" id="s06">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-white text-center">
+                    <i class="fa-solid fa-user-large fa-8x text-white mb-3"></i>
+                    <h3 class="fw900 text-primary"><small class="text-danger fw600">對於你的意義</small></h3>
+                    <div>
+                        <p class="text-s06 caption-text2 wow animate__fadeInDow Big" data-wow-duration="1s"
+                            data-wow-delay="0s" data-wow-iteration="1">
+                            當你在下午時刻，漫步來到星巴克，點購一杯雙份濃縮中杯那堤，或是購買一包咖啡豆，你個人的美好下午時光，已直接幫助提昇咖啡農的生活環境。</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-white text-center">
+                    <i class="fa-solid fa-people-roof fa-8x text-white mb-3"></i>
+                    <h3 class="fw900 text-primary"><small class="text-primary fw600">成為社區的一份子</small>
+                    </h3>
+                    <p class="text-s06 caption-text2 wow animate__fadeInDownBig" data-wow-duration="2s"
+                        data-wow-delay="0s" data-wow-iteration="1">
+                        我們持續推動自願性志工服務、推廣各項藝文活動，同時讓門市成為社區的一份子、社區的好鄰居。更希望連結彼此關係，讓星巴克門市成為最有人情味的生活空間。</p>
+                </div>
+                <div class="col-md-4 text-white text-center">
+                    <i class="fa-solid fa-earth-asia fa-8x text-white mb-3"></i>
+                    <h3 class="fw900 text-primary"><small class="text-warning fw600">更美好的世界</small></h3>
+                    <p class="text-s06 caption-text2 wow animate__fadeInDownBig" data-wow-duration="3s"
+                        data-wow-delay="0s" data-wow-iteration="1">
+                        當我們以道德採購的方式向咖啡農們購買咖啡豆的同時，也不忘為環境保護盡份心力。在我們還可以盡力的此刻，感謝你一起加入，讓世界更美好的行列。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 07 重要人物介紹 -->
+    <section class="bg-light" style="position: relative;" id="s07">
+        <div class="row">
+            <div class="col-md-5 bg-cover wow animate__fadeInRight" data-wow-duration="1s" data-wow-delay="0s"
+                data-wow-iteration="1"
+                style="background-image: url(./images/02.jpg); position: absolute; top: 0;bottom: 0;"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-end mt-2">
+                <div class="col-md-7 text-s07">
+                    <h2 class="fw900 text-success">咖啡豆是從哪裡來的?</h2>
+                    <p>全世界的咖啡幾乎都生長於<span
+                            class="fw900 text-danger">咖啡帶</span>上。咖啡帶環繞地球，落在南北迴歸線之間。全世界共有超過70個咖啡生產國，而星巴克採購超過30個國家的咖啡豆。每個國家都有不同的咖啡文化、種植環境及種植方法，造就不同的咖啡風味。<br>咖啡帶可分為三大產區：<span
+                            class="text-warning fw900">拉丁美洲、非洲和亞洲</span>。星巴克分別從這三大地區，採購、混合及烘焙咖啡豆，成為你手中那杯風味獨特的咖啡。<br>就像茶或者紅酒一樣，咖啡的產區對風味有極大的影響。每個產區都有不同的生長條件及處理方式，造就咖啡豆的獨特風味。
+                    </p>
+                    <button class="btn btn-outline-primary">更多內容</button>
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <h3 class="fw500" style="color: var(--icestone01);">拉丁美洲<br>咖啡豆</h3>
+                            <p class="wow animate__fadeInTopLeft" data-wow-duration="1s" data-wow-delay="0s"
+                                data-wow-iteration="1">
+                                拉丁美洲咖啡豆是星巴克許多經典口味的基礎。相較於其他產區，我們採購的咖啡豆有一大部分來自於拉丁美洲，因為這個產區的豆子有著穩定的品質及風味。拉丁美洲產區有著許多微型氣候的差異、海拔高度的變化及傳統的處理法。
+                            </p>
+                            <p class="fw900 wow animate__bounceIn" data-wow-duration="5s" data-wow-delay="0s"
+                                data-wow-iteration="2">所以，拉丁美洲的咖啡喝起來會感受到堅果、可可，及柔和的香料風味。</p>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw500" style="color: var(--icestone02);">非洲<br>咖啡豆</h3>
+                            <p class="wow animate__fadeInTopLeft" data-wow-duration="2s" data-wow-delay="0s"
+                                data-wow-iteration="1">
+                                非洲是世界上某些最獨特的咖啡豆種的產區，而這也展現了非洲產區咖啡豆的高品質。這個產區的豆子也時常帶有最具異國風情的獨特風味，更特別的是，衣索比亞是咖啡的發源國。</p>
+                            <p class="fw900 wow animate__bounceIn" data-wow-duration="5s" data-wow-delay="0s"
+                                data-wow-iteration="2">非洲產區的咖啡，從柑橘到莓果調性，豐富風味總能令你驚豔。</p>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw500" style="color: var(--icestone04);">亞洲<br>咖啡豆</h3>
+                            <p class="wow animate__fadeInTopLeft" data-wow-duration="3s" data-wow-delay="0s"
+                                data-wow-iteration="1">
+                                這個佔地廣大的產區，時常產區風味大膽獨特，在其他地區極少見到的風味。亞洲產區包含中國、印尼、巴布亞紐幾內亞、越南、泰國和印度。這個區域橫跨不同的氣候和地形，因而造就十分不同的咖啡風味。
+                            </p>
+                            <p class="fw900 wow animate__bounceIn" data-wow-duration="5s" data-wow-delay="0s"
+                                data-wow-iteration="2">亞洲地區的咖啡濃郁、帶有草本及香料的豐富滋味。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 08 次版活動排版-->
+    <section id="s08">
+        <div class="container wow animate__flipInX " data-wow-duration="1s" data-wow-delay="0s" data-wow-iteration="1"
+            style="background-color: var();">
+            <div class="display-4 fw900 text-center">│門市相關│</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <i class="fa-solid fa-calendar-days fa-7x me-4 mt-5 text-danger"></i>
+                        <div>
+                            <div class="h2 fw900 text-center text-danger">門市最新活動</div>
+                            <p><a href="#" class="s12a">端午節預購專屬優惠<br>2024/5/13(一)~2024/6/2(日)</a></p>
+                            <p><a href="#" class="s12a">星座系列商品銷售辦法說明<br>2024/05/13(一)當日各門市營業開始時間</a></p>
+                            <p><a href="#" class="s12a">YELLOW & ROSE DAY 第2杯折$100<br>2024/5/13(一)-5/14(二)</a></p>
+                            <p><a href="#" class="s12a">一起吃飯 用餐愉快！品牌餐具組 滿額贈活動<br>2024/5/8(三)起，贈完為止</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <i class="fa-solid fa-camera fa-7x me-4 mt-5 text-success"></i>
+                        <div class="m-auto">
+                            <div class="h2 fw900 text-center text-success">特色門市</div>
+                            <p><a href="#" class="s12a">摩登典藏吧台</a></p>
+                            <p><a href="#" class="s12a">典藏咖啡體驗</a></p>
+                            <p><a href="#" class="s12a">異地特色門市</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <i class="fa-solid fa-wand-magic-sparkles fa-7x me-4 mt-5 text-primary"></i>
+                        <div>
+                            <div class="h2 fw900 text-center text-primary">星禮程活動</div>
+                            <p><a href="#" class="s12a">金星禮線上限時兌換 - 120★兌換 指定季節咖啡豆 250g 乙包<br>2024/5/13(一) 11:00~5/19(日)
+                                    23:59</a>
+                            </p>
+                            <p><a href="#" class="s12a">金星禮線上限時兌換 - 70★兌換 常態掛耳咖啡 乙盒<br>2024/5/13(一) 11:00~5/19(日)
+                                    23:59</a></p>
+                            <p><a href="#" class="s12a">行動預點專屬【芝麻系列飲品77折】<br>2024/5/13(一)-5/17(五)</a></p>
+                            <p><a href="#" class="s12a">指定星冰粽禮盒 Bonus Star<br>2024/5/13(一)-5/15(三)</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <i class="fa-solid fa-shop fa-7x me-4 mt-5 text-secondary"></i>
+                        <div>
+                            <div class="h2 fw900 text-center text-secondary">外部合作活動</div>
+                            <p><a href="#" class="s12a">foodomo｜5月外送合作活動<br>2024/05/08(三)-06/11(二)</a></p>
+                            <p><a href="#" class="s12a">LINE禮物｜星巴克品牌館：啡常幸運 有你陪伴<br>2024/04/19~2024/05/20</a></p>
+                            <p><a href="#" class="s12a">每週必搶! 愛用LINE Pay星巴克隨⾏卡【線上儲值享好禮】<br>2024/4月~6月每週四、五</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 09 類似重要人物排版 -->
+    <section style="position: relative;" id="s09">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 text-s09">
+                    <dl class="row mt-2">
+                        <h3 class="fw900">客製你最愛的飲料風味</h3>
+                        <h5>歡迎光臨星巴克!今天想喝點什麼?除了菜單上的飲品，我們還提供客製化選擇。現在就跟夥伴分享您的想法，製作專屬您的飲料風味!</h5>
+                        <dt class="col-sm-3 text-danger text-center m-auto">奶類選擇</dt>
+                        <dd class="col-sm-9 text-danger">
+                            <p class="m-auto">試試將牛奶更換成低脂牛奶、豆奶或椰奶，或升級為燕麥奶、杏仁堅果奶，並根據喜好調整飲料溫度。</p>
+                        </dd>
+
+                        <dt class="col-sm-3 text-warning text-center m-auto">咖啡選擇</dt>
+                        <dd class="col-sm-9 text-warning">
+                            <p class="m-auto">你可以調整濃縮咖啡份數、或更換為低咖啡因濃縮咖啡、短濃縮咖啡、或升級特選濃縮咖啡。</p>
+                        </dd>
+
+                        <dt class="col-sm-3 text-primary text-center m-auto">風味選擇</dt>
+                        <dd class="col-sm-9 text-primary">
+                            <p class="m-auto">試試改變飲料風味，香草、焦糖、榛果、鹹焦糖等四種風味選擇，為你的飲料增添變化。</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-md-5 bg-cover wow animate__backInLeft" data-wow-duration="1.5s" data-wow-delay="0s"
+                data-wow-iteration="1"
+                style="background-image: url(./images/s09-1.jpg); position: absolute; top: 0;bottom: 0;">
+            </div>
+        </div>
+    </section>
+    <!-- section 10 地圖及表單 -->
+    <section>
+        <div class="container pt-2" style="background-color: var(--mycolor02);">
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7279.359347797663!2d120.60888939869483!3d24.182964378557404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346915fc2e0c5bf7%3A0xc1646eb93381897c!2zU1RBUkJVQ0tTIOaYn-W3tOWFiyAo56aP5bq36ZaA5biCKQ!5e0!3m2!1szh-TW!2stw!4v1715564946076!5m2!1szh-TW!2stw"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-6 px-4">
+                    <h3 class="mt-1">訂位需求</h3>
+                    <div class="mb-2">
+                        <label for="" class="form-label">姓名</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-2">
+                        <label for="" class="form-label">電話</label>
+                        <input type="phone" class="form-control">
+                    </div>
+                    <div class="mb-2">
+                        <label for="" class="form-label">信箱</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="d-flex">
+                        <div class="mb-2 col-md-5 me-auto">
+                            <label for="" class="form-label">人數</label>
+                            <input type="number" min="1" max="6" value="2" class="form-control">
+                        </div>
+                        <div class="mb-2 col-md-6">
+                            <label for="" class="form-label">時間</label>
+                            <input type="time" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" name="food">
+                        <label for="">咖啡/飲品</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" name="food">
+                        <label for="">糕點/餅乾</label>
+                    </div>
+                    <div class="text-end mt-1">
+                        <button class="btn btn-outline-danger">取消</button>
+                        <button class="btn btn-primary">確認</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 11 背景圖加文 -->
+    <section id="s11">
+        <div class="row">
+            <div class="col-md-6 bg-cover" style="background-image: url(./images/05.jpg); height: 360px;">
+                <div class="row">
+                    <div class="col-md-7 ps-4 pt-2">
+                        <small class="badge text-bg-danger p-2">夥伴招募</small>
+                        <h3 class="text-light caption-text rounded rounded-4 p-1 shadow-lg">應徵門市儲備幹部/店經理</h3>
+                        <p class="text-light caption-text rounded rounded-4 p-1 shadow-lg wow animate__fadeInDownBig"
+                            data-wow-duration="2s" data-wow-delay="0s" data-wow-iteration="1">條件要求：<br>
+                            1.學士/副學士學歷並有2年相關工作經驗<br>
+                            2.具管理潛能及抗壓性<br>
+                            3.願意接受7個月培訓計畫的挑戰<br>
+                            4.需配合早、晚排班<br>
+                            5.需配合職缺地點分發異動</p>
+                        <button class="btn btn-outline-warning wow animate__heartBeat" data-wow-duration="2s"
+                            data-wow-delay="2s" data-wow-iteration="3">我要應徵</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 bg-cover" style="background-image: url(./images/07.jpg); height: 360px;">
+                <div class="row">
+                    <div class="col-md-7 pt-5 mt-4">
+                        <small class="badge text-bg-danger p-2">夥伴招募</small>
+                        <h3 class="text-light caption-text rounded rounded-4 p-1 shadow-lg">應徵門市正職/兼職人員</h3>
+                        <p class="text-light caption-text rounded rounded-4 p-1 shadow-lg wow animate__fadeInDownBig"
+                            data-wow-duration="3s" data-wow-delay="0s" data-wow-iteration="1">條件要求：<br>
+                            1.高中/職（含）以上畢業<br>
+                            2.需配合早、晚班及假日輪班<br>
+                            3.需配合門市調動</p>
+                        <button class="btn btn-outline-warning wow animate__heartBeat" data-wow-duration="2s"
+                            data-wow-delay="2s" data-wow-iteration="3">我要應徵</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 ps-5" style="background-color: var(--mycolor01);">
+                <h3 class="pt-3">成為我們的夥伴</h3>
+                <hr>
+                <p>我們創造一個令人舒服自在的環境，讓每位在門市工作的夥伴都開心生活且樂於工作。</p>
+                <button class="btn btn-outline-primary wow animate__heartBeat" data-wow-duration="2s"
+                    data-wow-delay="2s" data-wow-iteration="3">瞭解詳情</button>
+            </div>
+            <div class="col-md-8 bg-cover wow animate__backInLeft" data-wow-duration="2s" data-wow-delay="0s"
+                data-wow-iteration="1" style="background-image: url(./images/a14.jpg);height: 300px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 bg-cover wow animate__backInRight" data-wow-duration="2s" data-wow-delay="0s"
+                data-wow-iteration="1" style="background-image: url(./images/04.jpg);height: 300px;"></div>
+            <div class="col-md-4 pe-5" style="background-color: var(--mycolor03);">
+                <h3 class="pt-3">我們的福利</h3>
+                <hr>
+                <p>我們特別重視夥伴的福利，打造幸福企業，矢志成為最佳僱主品牌。</p>
+                <button class="btn btn-outline-success wow animate__heartBeat" data-wow-duration="2s"
+                    data-wow-delay="2s" data-wow-iteration="3">瞭解詳情</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 ps-5" style="background-color: var(--mycolor04);">
+                <h3 class="pt-3">發展晉升與專業學習</h3>
+                <hr>
+                <p>我們非常樂於投資並支援夥伴在工作上發揮創意，創造共好雙贏的學習型組織團隊。</p>
+                <button class="btn btn-outline-danger wow animate__heartBeat" data-wow-duration="2s" data-wow-delay="2s"
+                    data-wow-iteration="3">瞭解詳情</button>
+            </div>
+            <div class="col-md-8 bg-cover wow animate__backInLeft" data-wow-duration="2s" data-wow-delay="0s"
+                data-wow-iteration="1" style="background-image: url(./images/a10.jpg);height: 300px;"></div>
+        </div>
+    </section>
+    <!-- section 12 星禮程 -->
+    <section id="s12" class="py-4 bg-white">
+        <div class="container">
+            <h2 class="text-center">星禮程</h2>
+            <p class="text-center">星級回饋隨心享，讓每次美好消費體驗，變成您的專屬回饋</p>
+            <div class="row">
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="card">
+                        <img src="images/a14.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">成為星巴克會員</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="card">
+                        <img src="images/a15.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">專屬優惠</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12 bg-cover" style="background-image: url(./images/a20.jpg); height: 360px;">
+                <div class="row mt-5">
+                    <div class="col-md-7 p-4 m-auto p-5 me-5">
+                        <h3 class="text-light caption-text rounded rounded-4 shadow-lg p-2">什麼是星禮程？</h3>
+                        <p class="text-light caption-text rounded rounded-4 shadow-lg p-2 wow animate__fadeInDownBig"
+                            data-wow-duration="2s" data-wow-delay="0s" data-wow-iteration="1">
+                            註冊成為會員，每消費35元可獲贈一顆星星，累積星星晉升會員星級，星級回饋隨心享，讓每次美好消費體驗，變成您的專屬回饋</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 bg-cover" style="background-image: url(./images/a19.jpg); height: 360px;">
+                <div class="row">
+                    <div class="col-md-7 p-4">
+                        <h3 class="text-light caption-text rounded rounded-4 shadow-lg p-2">什麼是會員星級？</h3>
+                        <p class="text-light caption-text rounded rounded-4 shadow-lg p-2 wow animate__fadeInDownBig"
+                            data-wow-duration="2s" data-wow-delay="0s" data-wow-iteration="1">
+                            1.老饕黑咖啡好友分享優惠<br>
+                            2.指定商品9折優惠<br>
+                            3.行動預點服務專屬優惠回饋<br>
+                            4.飲料/商品回饋<br>
+                            5.指定新品飲料嚐鮮優惠<br>
+                            6.生日慶賀禮</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 bg-cover" style="background-image: url(./images/03.jpg); height: 360px;">
+                <div class="row mt-5">
+                    <div class="col-md-7 pt-5 mt-5">
+                        <h3 class="text-light caption-text rounded rounded-4 shadow-lg p-2">什麼是金星禮？</h3>
+                        <p class="text-light caption-text rounded rounded-4 shadow-lg p-2 wow animate__fadeInDownBig"
+                            data-wow-duration="3s" data-wow-delay="0s" data-wow-iteration="1">
+                            成為金星級會員後，消費累積金星禮星星可至門市與線上兌換更多回饋驚喜</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 bg-cover" style="background-image: url(./images/01.jpg); height: 360px;">
+                <div class="row mt-5">
+                    <div class="col-md-7 p-4 mt-5">
+                        <h3 class="text-light caption-text rounded rounded-4 shadow-lg p-2">如何獲得星星？</h3>
+                        <p class="text-light caption-text rounded rounded-4 shadow-lg p-2 wow animate__fadeInDownBig"
+                            data-wow-duration="2s" data-wow-delay="0s" data-wow-iteration="1">簡單三步驟，集星讓體驗更美好<br>
+                            1.加入會員<br>
+                            2.累積星星<br>
+                            3.享受回饋</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 bg-cover"
+                style="background-image: url(./images/a14.jpg); height: 360px; display: flex; align-items: center; justify-content: center;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-light caption-text rounded rounded-4 shadow-lg p-2"><a href="#"
+                                class="s12a text-light">星禮程常見問題</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 13 新增排版 -->
+    <div class="container">
+        <div class="row align-items-center"
+            style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; height: 100%;">
+            <div class="col-md-10 text-center">
+                <div class="text-cover rounded rounded-4 shadow-lg">
+                    <div class="h3 text-danger fw900">留意每個服務細節提供超越期望的服務
+                    </div>
+                    <p class="text-info">
+                        雙和醫院門市夥伴Lucy
+                    </p>
+                    <ul class="list-unstyled text-secondary text-start p-3">
+                        <li>每每到訪雙和醫院星巴克總有賓至如歸的感覺，有位夥伴眼力和記憶力特好，去過一次她便記得我，也總是特別關心且熱心的幫忙，除了介紹活動和協助找尋所需商品，提供試喝的掛耳咖啡時也會分享風味、口感與沖泡的便利性！親切又熱情是讓我每到雙和總喜愛到星巴克的原因，真的非常謝謝她！</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12 wow animate__fadeInTopLeft" data-wow-duration="3s" data-wow-delay="0.5s"
+                data-wow-iteration="1">
+                <div class="myimg bg-cover" style="background-image: url(./images/f1.jpg); height: 330px; border-radius: 10px;
+                box-shadow: 2px 2px 10px 5px #000000;"></div>
+            </div>
+            <div class="col-md-10 text-center">
+                <div class="text-cover rounded rounded-4 shadow-lg">
+                    <div class="h3 text-success fw900">展現溫暖更對每一件事情傾入細緻的關注</div>
+                    <p class="text-info">
+                        龍權門市店經理 Barry
+                    </p>
+                    <ul class="list-unstyled text-secondary text-start p-3">
+                        <li>親愛的星巴克您好！Thank you very much!
+                            突然遭到橫衝直撞飛來飛去的蜜蜂叮，經過門市夥伴即時的妥善處理，加上店內懂昆蟲的其他客人建議若是過敏體質，應即刻送醫評估為宜。夥伴陪同就醫，讓虛驚一場的受難成為窩心的美好體驗，這次的經驗超過預期的優質服務，感恩星巴克不遺餘力的示範事件危機處理，而夥伴的實踐得宜更是美麗而芬芳。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12 wow animate__backInLeft" data-wow-duration="3s" data-wow-delay="0.5s"
+                data-wow-iteration="1">
+                <div class="myimg bg-cover" style="background-image: url(./images/f2.jpg); height: 330px; border-radius: 10px;
+                box-shadow: 2px 2px 10px 5px #000000;"></div>
+            </div>
+            <div class="col-md-10 text-center">
+                <div class="text-cover rounded rounded-4 shadow-lg">
+                    <div class="h3 text-danger fw900">貼心為每一個人營造充滿歸屬感的咖啡時光
+                    </div>
+                    <p class="text-info">亞東門市夥伴Willy
+                    </p>
+                    <ul class="list-unstyled text-secondary text-start p-3">
+                        <li>顧客當天陪同行動不便坐在輪椅上家人至醫院回診，為避免造成其他顧客動線不便，就沒有進入門市。當安置好家人後，要進去門市吧台領咖啡時，吧台夥伴主動將飲料拿到門口，讓顧客感覺窩心！在專注份內的事情之外，還能夠洞察並體貼未說出口的需求。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12 wow animate__fadeInDownBig" data-wow-duration="3s" data-wow-delay="0.5s"
+                data-wow-iteration="1">
+                <div class="myimg bg-cover" style="background-image: url(./images/f3.jpg); height: 330px; border-radius: 10px;
+                box-shadow: 2px 2px 10px 5px #000000;"></div>
+            </div>
+            <div class="col-md-10 text-center">
+                <div class="text-cover rounded rounded-4 shadow-lg">
+                    <div class="h3 text-success fw900">感謝與暖心故事，來自生活中的體貼
+                    </div>
+                    <p class="text-info">
+                        土城金城門市夥伴Cindy(圖左)以及Vivi(圖右)
+                    </p>
+                    <ul class="list-unstyled text-secondary text-start p-3">
+                        <li>二二八連假，有位顧客在門市二樓突然無意識暈眩跌倒，經現場其他客人向夥伴反應後，夥伴迅速到二樓關心跌倒顧客，並聯繫救護人員前來處理。夥伴Vivi、Cindy不僅貼心在旁陪伴安撫，並提醒跌倒客人為了安全起見，耐心等待救護人員檢視狀況後再離開比較安全。而救護人員到場後，先為顧客做初步檢查，顧客表示無大礙不需就醫，夥伴不僅同步留下顧客家人的聯繫方式做後續關心，並逐一安撫現場其他的客人，這讓當時在現場目擊一切的留下深刻的印象，顧客特別回饋表揚夥伴臨場表現很到位，人員教育訓練很紮實。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12 wow animate__fadeInTopLeft" data-wow-duration="3s" data-wow-delay="0.5s"
+                data-wow-iteration="1">
+                <div class="myimg bg-cover" style="background-image: url(./images/f4.jpg); height: 330px; border-radius: 10px;
+                box-shadow: 2px 2px 10px 5px #000000;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- sectiom 14 頁尾及連結 -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 不太一樣的星巴克. All rights reserved.</p>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="text-white me-2">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="text-white me-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="text-white me-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+    <script>
+        $(function () {
+            //counter up2
+            const counterUp = window.counterUp.default
+
+            const callback = entries => {
+                entries.forEach(entry => {
+                    const el = entry.target
+                    if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+                        counterUp(el, {
+                            duration: 2000,
+                            delay: 16,
+                        })
+                        el.classList.add('is-visible')
+                    }
+                })
+            }
+
+            const IO = new IntersectionObserver(callback, { threshold: 1 })
+
+            const el1 = document.querySelector('.counter1')
+            IO.observe(el1)
+
+            const el2 = document.querySelector('.counter2')
+            IO.observe(el2)
+
+            const el3 = document.querySelector('.counter3')
+            IO.observe(el3)
+
+            const el4 = document.querySelector('.counter4')
+            IO.observe(el4)
+
+        });
+    </script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
